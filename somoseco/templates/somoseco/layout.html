@@ -1,16 +1,18 @@
 {% load static %}
-
 <!DOCTYPE html>
+
 <html lang="en">
     <head>
         <title>SOMOS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'somoseco/styles.css' %}">
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="{% url 'index' %}">SOMOS</a>
-            <div>
-                <ul class="navbar-nav">
+        <nav class="mainNavbar">
+            <a clas="logo" href="{% url 'index' %}">SOMOS</a>
+            <div class="navSection">
+                <ul>
                     <li class="nav-item">
                         <a class="nav-link" href="">Log In</a>
                     </li>
@@ -19,10 +21,10 @@
                     </li>
                 </ul>
             </div>
-          </nav>
-        <div class="body">
+        </nav>
+        <main class="body">
             {% block body %}
             {% endblock %}
-        </div>
+        </main>
     </body>
 </html>

@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0 20px;
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(9, 121, 44) 0%, rgb(79, 161, 109) 100%);
+}
+
+.mainNavbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.navSection {
+    display: flex;
+    align-items: center;
+}
+.navSection > ul {
+    display: flex;
+    list-style: none;
+}
