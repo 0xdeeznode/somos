@@ -10,19 +10,23 @@
     </head>
     <body>
         <nav class="mainNavbar">
-            <a clas="logo" href="{% url 'index' %}">SOMOS</a>
+            <a class="logo" href="{% url 'index' %}">SOMOS</a>
             <div class="navSection">
                 <ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Log In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="">Register</a>
-                    </li>
+                    <a class="nav-link" href="">
+                        <li class="nav-item">
+                            Log In
+                        </li>
+                    </a>
+                    <a class="nav-link" href="">
+                        <li class="nav-item">
+                            Register
+                        </li>
+                    </a>
                 </ul>
             </div>
         </nav>
-        <main class="body">
+        <main class="body-container">
             {% block body %}
             {% endblock %}
         </main>
