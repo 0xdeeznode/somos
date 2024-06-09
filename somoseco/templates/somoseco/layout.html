@@ -3,26 +3,48 @@
 
 <html lang="en">
     <head>
-        <title>SOMOS</title>
+        <title>SOMOS {% block title %}{% endblock %}</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{% static 'somoseco/styles.css' %}">
+        {% block styles %}
+        {% endblock %}
     </head>
     <body>
         <nav class="mainNavbar">
-            <a class="logo" href="{% url 'index' %}">SOMOS</a>
+            <a class="logo" href="{% url 'somoseco:index' %}">SOMOS</a>
             <div class="navSection">
                 <ul>
-                    <a class="nav-link" href="">
+                    {% if user.is_authenticated %}
+                        <a class="nav-link" href="">
+                            <li class="nav-item">
+                                <strong>{{ user.username }}</strong>
+                            </li>
+                        </a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                        <a class="nav-link" href="{% url 'somoseco:index' %}">
+                            <li class="nav-item">
+                                Campaigns
+                            </li>
+                        </a>    
+                        <a class="nav-link" href="{% url 'somoseco:logout' %}">
+                            <li class="nav-item">
+                                Log Out
+                            </li>
+                        </a>
+                    {% else %}
+                    <a class="nav-link" href="{% url 'somoseco:login' %}">
                         <li class="nav-item">
                             Log In
                         </li>
                     </a>
-                    <a class="nav-link" href="">
+                    <a class="nav-link" href="{% url 'somoseco:register' %}">
                         <li class="nav-item">
                             Register
                         </li>
                     </a>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

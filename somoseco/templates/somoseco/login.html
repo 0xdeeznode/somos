@@ -1,0 +1,33 @@
+{% extends "somoseco/layout.html" %}
+{% load static %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block style %} 
+    <link rel="stylesheet" href="{% static 'somoseco/styles_login.css' %}">
+{% endblock %}
+
+{% block body %}
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+    <section>
+        <div class="login-box">
+            <h2>Login</h2>
+            <form action="{% url 'somoseco:login' %}" method="post">
+                {% csrf_token %}
+                <div class="textbox">
+                    <input type="text" name="username" placeholder="Username">
+                </div>
+                <div class="textbox">
+                    <input type="password" name="password" placeholder="Password">
+                </div>
+                <input class="btn" type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="{% url 'somoseco:register' %}">Register here.</a></p>
+        </div>
+    </section>
+{% endblock %}
+

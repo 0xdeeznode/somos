@@ -72,7 +72,6 @@ a {
     color: var(--plata-color);
     padding: 2vw;
     overflow: hidden;
-    border: 1px solid red;
 }
 .index-plane {
     display: grid;
