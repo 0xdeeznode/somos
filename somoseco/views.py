@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.contrib.auth import logout, login, authenticate
+from django.db import IntegrityError
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 
@@ -10,7 +11,7 @@ def index(request):
     return render(request, 'somoseco/index.html')
 
 
-def register_view(request):
+def signup_view(request):
     if request.method == "POST":
         username = request.POST["username"]
         email = request.POST["email"]
@@ -19,16 +20,20 @@ def register_view(request):
         password = request.POST["password"]
         confirmation = request.POST["confirmation"]
         if password != confirmation:
-            return render(request, "somoseco/register.html", {
+            return render(request, "somoseco/signup.html", {
                 "message": "Passwords don't match."
             })
-        
-        user = User.objects.create_user(username, password, email)
-        user.save()
+        try:
+            user = User.objects.create_user(username, password, email)
+            user.save()
+        except IntegrityError:
+            return render(request, "somoseco/signup.html", {
+                "message": "Username already taken."
+            })
         login(request, user)
-        return HttpResponseRedirect(reverse("somoseco:index"))
+        return HttpResponseRedirect(reverse("somoseco/index.html"))
     else:
-        return render(request, "somoseco/register.html")
+        return render(request, "somoseco/signup.html")
 
 
 def login_view(request):

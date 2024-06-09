@@ -1,0 +1,72 @@
+:root{
+    --verde-color: #04da36;
+    --tierra-color: #29211e;
+    --azul-color: #0e0e6a;
+    --plata-color: #e7e9e9;
+    --negro-color: #0e0e0e;
+}
+.section-container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 100px 60px;
+    
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--plata-color);
+}
+.header h2 {
+    margin: 0;
+    padding: 4px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--plata-color);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px var(--verde-color);
+}
+.header h4 {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+    padding: 4px;
+    background-image: linear-gradient(to right, rgba(112, 13, 13, 0.194), rgba(157, 40, 40, 0.2));
+}
+form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    padding: 12px;
+    border: 1px solid blue;
+}
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: start;
+    border-bottom: 1px solid var(--plata-color);
+}
+.form-group input{
+    font-size: 18px;
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--plata-color);
+}
+.form-group label {
+    font-size: 22px;
+    color: var(--plata-color);
+}
