@@ -5,17 +5,6 @@
     --plata-color: #e7e9e9;
     --negro-color: #0e0e0e;
 }
-.section-container {
-    display: flex;
-    width: 100%;
-    height: fit-content;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    align-items: center;
-    padding: 100px 60px;
-    
-}
 .header {
     display: flex;
     flex-direction: column;
@@ -46,15 +35,14 @@ form {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 28px;
+    gap: 24px;
     padding: 12px;
-    border: 1px solid blue;
 }
 .form-group {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
     text-align: start;
     border-bottom: 1px solid var(--plata-color);
 }
@@ -69,4 +57,31 @@ form {
 .form-group label {
     font-size: 22px;
     color: var(--plata-color);
+}
+.btn-submit {
+    width: 40%;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--plata-color);
+    background: none;
+    border: 1px solid var(--plata-color);
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.btn-submit:hover {
+    background: var(--verde-color);
+    text-shadow: 2px 2px 4px var(--negro-color);
+}
+.last-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-self: start;
+    color: var(--plata-color);
+}
+.last-box a {
+    color: blue;
 }

@@ -18,6 +18,18 @@ body {
     background: var(--negro-color);
     
 }
+/* GLOBAL */
+.section-container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 100px 60px;
+}
+/* ENDGLOBAL */
 .body-container {
     display: flex;
     flex-direction: column;

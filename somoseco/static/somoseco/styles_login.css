@@ -1,7 +1,80 @@
-.login_container {
-    width: 100vw;
-    height: 100vh;
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--plata-color);
+}
+.header h2 {
+    margin: 0;
+    padding: 4px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--plata-color);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px var(--verde-color);
+}
+.header h4 {
+    margin: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
+    border-radius: 100px;
+    padding: 4px;
+    background-image: linear-gradient(to right, rgba(112, 13, 13, 0.194), rgba(157, 40, 40, 0.2));
+}
+form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 12px;
+}
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: start;
+    border-bottom: 1px solid var(--plata-color);
+}
+.form-group input{
+    font-size: 18px;
+    padding: 10px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--plata-color);
+}
+.form-group label {
+    font-size: 22px;
+    color: var(--plata-color);
+}
+.btn-submit {
+    width: 40%;
+    padding: 10px;
+    font-size: 20px;
+    color: var(--plata-color);
+    background: none;
+    border: 1px solid var(--plata-color);
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.btn-submit:hover {
+    background: var(--verde-color);
+    text-shadow: 2px 2px 4px var(--negro-color);
+}
+.last-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-self: start;
+    color: var(--plata-color);
+}
+.last-box a {
+    color: blue;
 }
