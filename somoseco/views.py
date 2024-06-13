@@ -15,6 +15,7 @@ def signup_view(request):
     if request.method == "POST":
         username = request.POST["username"]
         email = request.POST["email"]
+        name = request.POST["name"]
 
         # Password match check
         password = request.POST["password"]
@@ -24,14 +25,14 @@ def signup_view(request):
                 "message": "Passwords don't match."
             })
         try:
-            user = User.objects.create_user(username, password, email)
+            user = User.objects.create_user(username, email, password)
             user.save()
         except IntegrityError:
             return render(request, "somoseco/signup.html", {
                 "message": "Username already taken."
             })
         login(request, user)
-        return HttpResponseRedirect(reverse("somoseco/index.html"))
+        return HttpResponseRedirect(reverse("somoseco:index"))
     else:
         return render(request, "somoseco/signup.html")
 

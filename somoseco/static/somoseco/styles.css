@@ -38,6 +38,7 @@ a {
    text-decoration: none;
    color: inherit;
 }
+/* NAVBAR */
 .mainNavbar {
     display: flex;
     width: 100%;
@@ -61,13 +62,13 @@ a {
 }
 .navSection > ul {
     display: flex;
-    gap: 1.2vw;
+    gap: 1.5vw;
     list-style: none;
 }
 .nav-item{
     border: 2px solid var(--verde-color);
     border-radius: 1.5vw;
-    padding: 0.9vw;
+    padding: 1vw;
     background-color: #3e332f;
     transition: background-color 0.4s ease, border 0.4s ease, border-radius 0.4s ease;
 }
@@ -159,6 +160,11 @@ a {
 
 /* Media Queries INDEX PAGE */
 @media (max-width: 768px) {
+    .navSection > ul {
+        display: flex;
+        gap: 2.5vw;
+        list-style: none;
+    }
     .index-hero {
         top: 80px;
         padding: 10px;
@@ -168,25 +174,29 @@ a {
         padding: 10px;
         display: grid;
         justify-content: center;
-        grid-template-columns: repeat(2, 250px);
+        grid-template-columns: repeat(2, 220px);
         grid-template-rows: repeat(auto-fit, 200px);
         grid-gap: 1.5vw;
     }
     .index-box {
-        padding: 1vw;
+        padding: 5px;
     }
     .index-plane .index-box:nth-of-type(1) {
         grid-column: 1 / 2;
         grid-row: 1 / 4;
-        font-size: 28px;
+        font-size: 25px;
         font-weight: bold;
+    }
+    .index-plane .index-box:nth-of-type(1) h1 {
+        width: 96%;
+        text-wrap: wrap;
     }
     .index-plane .index-box:nth-of-type(2) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         gap: 0.5vh;
         background-image: url('/static/images/trash-1.svg');
-        background-size: 130px; 
+        background-size: 110px; 
         background-repeat: no-repeat;
         background-position: bottom right;
     }
@@ -194,7 +204,7 @@ a {
         grid-column: 2 / 3 ;
         grid-row: 2 / 3;
         background-color: var(--tierra-color);
-        background-size: 190px; 
+        background-size: 178px; 
         background-repeat: no-repeat;
         background-position: bottom left;
     }
@@ -213,7 +223,8 @@ a {
         border: 2px solid var(--verde-color);
         background-color: var(--tierra-color);
         background-image: url('/static/images/rewards-1.svg');
-        background-size: cover; 
+        background-size: contain;
+        background-repeat: no-repeat; 
         background-position: center;
     }
 }
