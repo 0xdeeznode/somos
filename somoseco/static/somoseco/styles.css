@@ -53,7 +53,7 @@ a {
     display: flex;
     align-items: center;
     font-size: 18px;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 2px 2px 4px var(--verde-color);
 }
 .logo {
     font-size: 42px;
@@ -66,16 +66,16 @@ a {
     list-style: none;
 }
 .nav-item{
-    border: 2px solid var(--verde-color);
+    border: 1px solid var(--plata-color);
     border-radius: 1.5vw;
     padding: 1vw;
-    background-color: #3e332f;
+    background-color: var(--negro-color);
     transition: background-color 0.4s ease, border 0.4s ease, border-radius 0.4s ease;
 }
 .nav-item:hover {
-    background-color: var(--tierra-color);
-    border: 2px solid #04da3674;
-    text-shadow: 2px 2px 4px var(--verde-color);
+    background-color: var(--verde-color);
+    border: 1px solid #04da3674;
+    text-shadow: 2px 2px 4px var(--negro-color);
 }
 /* ==== HERO SECTION ==== */
 .index-hero {
