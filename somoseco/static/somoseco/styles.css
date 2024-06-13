@@ -28,6 +28,7 @@ body {
     gap: 20px;
     align-items: center;
     padding: 100px 60px;
+    border: 1px solid red;
 }
 /* ENDGLOBAL */
 .body-container {
@@ -90,9 +91,10 @@ a {
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 250px);
-    grid-template-rows: repeat(4, 250px);
+    grid-template-rows: repeat(3, 250px);
     grid-gap: 1.8vw;
     width: 100%;
+    height: fit-content;
 }
 .index-box {
     display: flex;
