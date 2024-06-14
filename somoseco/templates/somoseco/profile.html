@@ -1,0 +1,16 @@
+{% extends "somoseco/layout.html" %}
+{% load static %}
+
+{% block title %}
+    {{ username }}: Profile
+{% endblock %}
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'somoseco/styles_profile.css' %}">
+{% endblock %}
+
+{% block body %}
+    <section class="se">
+
+    </section>
+{% endblock %}

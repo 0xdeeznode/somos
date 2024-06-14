@@ -16,7 +16,7 @@
             <div class="navSection">
                 <ul>
                     {% if user.is_authenticated %}
-                        <a class="nav-link" href="">
+                        <a class="nav-link" href="{% url 'somoseco:profile' user_id=user.id %}">
                             <li class="nav-item">
                                 <strong>{{ user.username }}</strong>
                             </li>

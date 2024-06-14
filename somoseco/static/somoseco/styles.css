@@ -95,6 +95,7 @@ a {
     grid-gap: 1.8vw;
     width: 100%;
     height: fit-content;
+    padding-top: 40px;
 }
 .index-box {
     display: flex;
@@ -103,9 +104,6 @@ a {
     border-radius: 1.5vw;
     text-align: center;
     transition: transform 0.5s ease;
-}
-.index-box:hover {
-    transform: perspective(1000px) rotateX(-1.5deg) rotateY(0deg);
 }
 .index-plane .index-box:nth-of-type(1) {
     grid-column: 1 / 4;

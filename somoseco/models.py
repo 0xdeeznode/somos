@@ -20,7 +20,11 @@ class User(AbstractUser):
 class Post(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    neighborhood = models.CharField(max_length=200)
+    city = models.CharField(max_length=200)
     description = models.TextField()
+    image = models.URLField()
     complexity = models.IntegerField(choices=[(1, '1'), (2, '2'), (3, '3'), (4, '4'), (5, '5')])
     reward = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
