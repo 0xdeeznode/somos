@@ -16,9 +16,11 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
     background: var(--negro-color);
-    
 }
 /* GLOBAL */
+button:hover {
+    cursor: pointer;
+}
 .section-container {
     display: flex;
     width: 100%;
@@ -28,7 +30,6 @@ body {
     gap: 20px;
     align-items: center;
     padding: 100px 60px;
-    border: 1px solid red;
 }
 /* ENDGLOBAL */
 .body-container {
@@ -66,14 +67,14 @@ a {
     gap: 1.5vw;
     list-style: none;
 }
-.nav-item{
+.navB-item{
     border: 1px solid var(--plata-color);
     border-radius: 1.5vw;
     padding: 1vw;
     background-color: var(--negro-color);
     transition: background-color 0.4s ease, border 0.4s ease, border-radius 0.4s ease;
 }
-.nav-item:hover {
+.navB-item:hover {
     background-color: var(--verde-color);
     border: 1px solid #04da3674;
     text-shadow: 2px 2px 4px var(--negro-color);
